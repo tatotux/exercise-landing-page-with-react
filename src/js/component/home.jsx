@@ -1,26 +1,38 @@
 import React from "react";
+// import { NavBar } from "./navbar.js";
+import { Card } from "./card.js";
+// import { Footer } from "./footer.js";
+import { Jumbotron } from "./jumbotron.js";
+// import { NavBar } from "./navbar.js";
 
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
+const texts = [
+	"Lorem ipsum dolor sit amet consectetur adipiscing elit praesent rutrum, platea interdum fames proin vulputate tortor neque ligula eleifend, nostra magna ridiculus lacus leo habitasse senectus massa.",
+	"Mauris eleifend elementum quam in sociis duis morbi aenean, phasellus suspendisse porta sapien sodales dictum eros, enim est viverra class himenaeos massa vehicula.",
+	"Lorem ipsum dolor sit amet consectetur adipiscing elit praesent rutrum, platea interdum fames proin vulputate tortor neque ligula eleifend, nostra magna ridiculus lacus leo habitasse senectus massa.",
+	"Mauris eleifend elementum quam in sociis duis morbi aenean, phasellus suspendisse porta sapien sodales dictum eros, enim est viverra class himenaeos massa vehicula."
+];
+
+// var Cards = texts.map(text => (
+// 	<Card
+// 		imageURL="http://via.placeholder.com/500x325"
+// 		title="Card title"
+// 		cardDescription={text}
+// 	/>
+// ));
 
 //create your first component
-const Home = () => {
-	return (
-		<div className="text-center">
-			<h1 className="text-center mt-5">Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working...
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
-		</div>
-	);
-};
-
-export default Home;
+export class Home extends React.Component {
+	render() {
+		return (
+			<div className="container">
+				<Card
+					imageURL="http://via.placeholder.com/500x325"
+					title="Card title"
+					cardDescription="Aqui va el texto"
+					buttonURL="#"
+					buttonLabel="Button Label"
+				/>
+			</div>
+		);
+	}
+}
